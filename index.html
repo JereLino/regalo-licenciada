@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Felicidades, Licenciada Radessich</title>
+<meta name="theme-color" content="#5b2a86">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2130;
+    --soft:#6a5d72;
+    --gold:#c79a3f;
+    --rose:#c76b78;
+    --bg1:#fbf6ef;
+    --bg2:#f3e7e9;
+    --deep:#3a1f52;
+    --maxw:560px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Nunito Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg1);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,.display{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.08}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px 24px;position:relative;
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(199,154,63,.18), transparent 60%),
+      linear-gradient(160deg,#4a2468 0%,#6a2f6e 45%,#9a4a63 100%);
+    color:#fff;overflow:hidden;
+  }
+  .hero .overline{
+    font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;
+    opacity:.85;margin-bottom:22px;font-weight:700;
+  }
+  .hero .pre{font-size:clamp(1.6rem,7vw,2.3rem);font-style:italic;opacity:.92}
+  .hero h1{
+    font-size:clamp(3rem,15vw,5.2rem);
+    margin:.1em 0 .35em;
+    text-shadow:0 2px 30px rgba(0,0,0,.25);
+  }
+  .hero .sub{
+    max-width:30ch;margin:0 auto;font-size:1.02rem;opacity:.92;font-weight:400;
+  }
+  .scrollhint{
+    position:absolute;bottom:28px;left:0;right:0;text-align:center;
+    font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;
+    animation:bob 2.2s ease-in-out infinite;
+  }
+  .scrollhint span{display:block;font-size:1.4rem;margin-top:4px}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+  /* decorative drifting petals in hero */
+  .petal{position:absolute;top:-10%;color:rgba(255,255,255,.5);font-size:16px;animation:fall linear infinite;pointer-events:none}
+  @keyframes fall{to{transform:translateY(120vh) rotate(360deg);opacity:0}}
+
+  /* ---------- STAGES ---------- */
+  .stage{padding:16vh 0;position:relative}
+  .stage:nth-child(even){background:linear-gradient(180deg,transparent,rgba(199,154,63,.05),transparent)}
+  .step{
+    font-family:"Cormorant Garamond",serif;font-size:3.2rem;font-weight:600;
+    color:var(--gold);opacity:.5;line-height:1;margin-bottom:8px;
+  }
+  .stage h2{font-size:clamp(2rem,9vw,2.9rem);color:var(--deep);margin-bottom:.5em;font-style:italic}
+  .stage p{font-size:1.1rem;color:#3f3545;max-width:36ch}
+  .stage p + p{margin-top:1em}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .delay1{transition-delay:.12s}
+  .delay2{transition-delay:.24s}
+
+  /* photo frame */
+  figure{margin:26px 0 0}
+  .frame{
+    position:relative;border-radius:18px;overflow:hidden;
+    background:linear-gradient(135deg,#efe3d6,#f6ecef);
+    box-shadow:0 18px 40px -18px rgba(58,31,82,.45);
+    aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+    border:6px solid #fff;outline:1px solid rgba(0,0,0,.05);
+  }
+  .frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .frame .ph{color:#b09a86;text-align:center;font-size:.9rem;padding:20px;font-weight:600}
+  .frame .ph span{display:block;font-size:2rem;margin-bottom:6px;opacity:.7}
+  figcaption{font-size:.85rem;color:var(--soft);text-align:center;margin-top:10px;font-style:italic}
+
+  /* big emphasis line */
+  .bigline{
+    font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;
+    font-size:clamp(2.2rem,11vw,3.6rem);color:var(--rose);line-height:1.1;margin:.3em 0;
+  }
+
+  /* ---------- FINAL GIFT ---------- */
+  .gift{
+    background:linear-gradient(160deg,#3a1f52,#6a2f6e 60%,#9a4a63);
+    color:#fff;text-align:center;padding:16vh 24px;position:relative;overflow:hidden;
+  }
+  .gift h2{color:#fff;font-size:clamp(2rem,9vw,2.9rem)}
+  .gift p{color:rgba(255,255,255,.92);margin:0 auto;max-width:34ch;font-size:1.08rem}
+  .giftbtn{
+    margin-top:34px;display:inline-block;cursor:pointer;border:none;
+    font-family:inherit;font-weight:700;font-size:1.05rem;letter-spacing:.02em;
+    color:#4a2468;background:linear-gradient(180deg,#ffe7a8,#e8c56b);
+    padding:18px 30px;border-radius:999px;
+    box-shadow:0 14px 34px -10px rgba(0,0,0,.5);
+    transition:transform .2s ease, box-shadow .2s ease;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  .giftbtn:active{transform:scale(.97)}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+
+  .amount{
+    margin-top:30px;opacity:0;transform:scale(.8);
+    transition:opacity .8s ease,transform .8s cubic-bezier(.2,1.3,.3,1);
+  }
+  .amount.show{opacity:1;transform:none}
+  .amount .label{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+  .amount .num{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(3.2rem,20vw,6rem);line-height:1;margin:.1em 0;
+    background:linear-gradient(180deg,#ffe7a8,#e8c56b);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 2px 30px rgba(255,220,130,.3);
+  }
+  .amount .note{font-size:1.05rem;color:#fff;max-width:28ch;margin:.4em auto 0}
+
+  .signoff{padding:14vh 24px 18vh;text-align:center;background:var(--bg1)}
+  .signoff .heart{font-size:2rem;color:var(--rose)}
+  .signoff p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.5rem;color:var(--deep);max-width:24ch;margin:12px auto 0;line-height:1.3}
+  .signoff .names{margin-top:18px;font-family:"Nunito Sans";font-style:normal;font-size:1rem;color:var(--soft);font-weight:700}
+
+  /* confetti canvas */
+  #confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+</style>
+</head>
+<body>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="overline">17 de noviembre de 2026</div>
+    <div class="pre">Felicidades,</div>
+    <h1>Licenciada<br>Radessich</h1>
+    <p class="sub">Antes de abrir tu regalo, queremos que recorras este camino con nosotros.</p>
+    <div class="scrollhint">Desliz&aacute; hacia abajo<span>&#8595;</span></div>
+  </header>
+
+  <!-- ================= ETAPA 1 ================= -->
+  <section class="stage">
+    <div class="wrap">
+      <div class="step reveal">01</div>
+      <h2 class="reveal">Donde todo empez&oacute;</h2>
+      <p class="reveal delay1">Tu vocaci&oacute;n no naci&oacute; en un aula de la facultad. Naci&oacute; mucho antes, frente a los nenes de la primaria, cuando descubriste que ense&ntilde;ar era la forma m&aacute;s linda que ten&iacute;as de cuidar a los dem&aacute;s.</p>
+      <p class="reveal delay2">Ah&iacute;, sin saberlo todav&iacute;a, empezaba este camino.</p>
+      <figure class="reveal delay2">
+        <div class="frame">
+          <img src="fotos/01.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="ph" style="display:none"><span>&#128247;</span>Foto de sus primeros a&ntilde;os / con los nenes</div>
+        </div>
+        <figcaption>Los primeros pasos de una docente de alma.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= ETAPA 2 ================= -->
+  <section class="stage">
+    <div class="wrap">
+      <div class="step reveal">02</div>
+      <h2 class="reveal">Siempre fuiste docente</h2>
+      <p class="reveal delay1">Aunque todav&iacute;a no ten&iacute;as el t&iacute;tulo, ya ense&ntilde;abas en cada gesto. A tus hijos, a tus alumnos, a tu familia. Ense&ntilde;aste con el ejemplo mucho antes de que un papel lo dijera.</p>
+      <p class="reveal delay2">Ser docente, para vos, nunca fue un trabajo. Fue tu manera de estar en el mundo.</p>
+      <figure class="reveal delay2">
+        <div class="frame">
+          <img src="fotos/02.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="ph" style="display:none"><span>&#128247;</span>Foto con sus hijos</div>
+        </div>
+        <figcaption>Con tus hijos, tu primera y m&aacute;s importante clase.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= ETAPA 3 ================= -->
+  <section class="stage">
+    <div class="wrap">
+      <div class="step reveal">03</div>
+      <h2 class="reveal">El d&iacute;a que decidiste volver a estudiar</h2>
+      <p class="reveal delay1">Madre, abuela, trabajadora. Y aun as&iacute;, elegiste sentarte otra vez del lado del que aprende. Empezar la facultad con una vida entera a cuestas no es para cualquiera.</p>
+      <p class="reveal delay2">Hace falta un coraje enorme para volver a empezar. Vos lo tuviste.</p>
+    </div>
+  </section>
+
+  <!-- ================= ETAPA 4 ================= -->
+  <section class="stage">
+    <div class="wrap">
+      <div class="step reveal">04</div>
+      <h2 class="reveal">Las cinco de la ma&ntilde;ana</h2>
+      <p class="reveal delay1">Te levantabas a las cinco para estudiar tranquila, cuando la casa todav&iacute;a dorm&iacute;a. Despu&eacute;s te ibas a trabajar, volv&iacute;as, cocinabas, y encima te sentabas a estudiar antes de salir para la facu.</p>
+      <p class="reveal delay2">Este t&iacute;tulo tiene adentro cada una de esas madrugadas.</p>
+      <figure class="reveal delay2">
+        <div class="frame">
+          <img src="fotos/03.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="ph" style="display:none"><span>&#128247;</span>Foto estudiando / en la facu</div>
+        </div>
+        <figcaption>Estudiar cuando todos descansan tambi&eacute;n es amor.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= ETAPA 5 ================= -->
+  <section class="stage">
+    <div class="wrap">
+      <div class="step reveal">05</div>
+      <h2 class="reveal">Este camino no fue f&aacute;cil</h2>
+      <p class="reveal delay1">Hubo cansancio, hubo d&iacute;as de querer aflojar, hubo mucho sacrificio que nadie vio. Pero nunca abandonaste.</p>
+      <p class="reveal delay2">Y hoy, mir&aacute;ndote, entendemos de d&oacute;nde sacaste la fuerza: de la misma vocaci&oacute;n con la que empezaste.</p>
+    </div>
+  </section>
+
+  <!-- ================= ETAPA 6 - HOY ================= -->
+  <section class="stage" style="text-align:center">
+    <div class="wrap">
+      <div class="step reveal" style="margin:0 auto">06</div>
+      <h2 class="reveal">Y hoy, por fin&hellip;</h2>
+      <div class="bigline reveal delay1">Sos Licenciada<br>en Educaci&oacute;n.</div>
+      <p class="reveal delay2" style="margin:0 auto">Lo lograste. Con todo en contra y el coraz&oacute;n a favor. Nadie te regal&oacute; nada: te lo ganaste madrugada por madrugada.</p>
+    </div>
+  </section>
+
+  <!-- ================= REGALO ================= -->
+  <section class="gift" id="gift">
+    <div class="wrap">
+      <h2 class="reveal">Por eso, este regalo</h2>
+      <p class="reveal delay1">Juntamos esto entre todos como una forma chiquita de agradecerte y de celebrar tu esfuerzo. No alcanza para pagar todo lo que diste, pero va con todo nuestro orgullo y nuestro amor.</p>
+      <button class="giftbtn reveal delay2" id="giftbtn" onclick="revealGift()">Toc&aacute; para ver tu regalo &#127873;</button>
+
+      <div class="amount" id="amount">
+        <div class="label">Tu regalo</div>
+        <div class="num">$XXX.XXX</div>
+        <p class="note">Ya te lo transferimos a tu cuenta. Revis&aacute; tu Mercado Pago &#128153;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FIRMA ================= -->
+  <section class="signoff">
+    <div class="heart">&#10084;&#65039;</div>
+    <p>Gracias por ense&ntilde;arnos que nunca es tarde para cumplir un sue&ntilde;o.</p>
+    <div class="names">Con todo nuestro amor.</div>
+  </section>
+
+  <canvas id="confetti"></canvas>
+
+<script>
+  /* ---- scroll reveal ---- */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.18});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ---- hero petals ---- */
+  (function(){
+    const hero=document.querySelector('.hero');
+    const chars=['✦','✧','·','❀'];
+    for(let i=0;i<14;i++){
+      const p=document.createElement('div');p.className='petal';
+      p.textContent=chars[i%chars.length];
+      p.style.left=Math.random()*100+'%';
+      p.style.fontSize=(10+Math.random()*16)+'px';
+      p.style.animationDuration=(7+Math.random()*8)+'s';
+      p.style.animationDelay=(-Math.random()*10)+'s';
+      hero.appendChild(p);
+    }
+  })();
+
+  /* ---- gift reveal + confetti ---- */
+  function revealGift(){
+    document.getElementById('amount').classList.add('show');
+    const btn=document.getElementById('giftbtn');
+    btn.style.transition='opacity .5s';btn.style.opacity='0';
+    setTimeout(()=>btn.style.display='none',500);
+    burst();
+  }
+
+  /* lightweight confetti */
+  const cv=document.getElementById('confetti');const ctx=cv.getContext('2d');
+  let W,H,parts=[];
+  function size(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
+  size();addEventListener('resize',size);
+  const colors=['#ffe7a8','#e8c56b','#c76b78','#9a4a63','#ffffff','#c79a3f'];
+  function burst(){
+    for(let i=0;i<160;i++){
+      parts.push({
+        x:W/2+(Math.random()-.5)*120, y:H*0.55,
+        vx:(Math.random()-.5)*9, vy:-(6+Math.random()*9),
+        g:.18+Math.random()*.1, s:5+Math.random()*7,
+        c:colors[(Math.random()*colors.length)|0],
+        rot:Math.random()*6, vr:(Math.random()-.5)*.3, life:0
+      });
+    }
+    if(!running){running=true;requestAnimationFrame(loop);}
+  }
+  let running=false;
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    parts.forEach(p=>{
+      p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;p.life++;
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);
+      ctx.fillStyle=p.c;ctx.globalAlpha=Math.max(0,1-p.life/160);
+      ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);ctx.restore();
+    });
+    parts=parts.filter(p=>p.y<H+40 && p.life<170);
+    if(parts.length){requestAnimationFrame(loop);}else{running=false;ctx.clearRect(0,0,W,H);}
+  }
+</script>
+</body>
+</html>
